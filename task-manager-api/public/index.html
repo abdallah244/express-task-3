@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Manager — Futuristic</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="laser"></div>
+    <span class="loader-text">Loading...</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="nav" id="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#">Task<span>Manager</span></a>
+      <nav class="links">
+        <a href="#intro">Intro</a>
+        <a href="#taskDemo">Tasks</a>
+        <a href="#apiViewer">API</a>
+      </nav>
+      <button class="cta">Get Started</button>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section id="intro" class="hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 class="headline" id="typingText"></h1>
+        <p class="sub">Next-gen Task Manager API with live preview and futuristic UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task Manager Demo -->
+  <section id="taskDemo" class="section">
+    <div class="container glass">
+      <h2 class="section-title neon">Manage Your Tasks</h2>
+      <form id="taskForm" class="task-form">
+        <input type="text" id="taskInput" placeholder="Enter new task..." required />
+        <button type="submit" class="btn primary">Add Task</button>
+        <button type="button" id="randomTask" class="btn ghost">Random Task</button>
+      </form>
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+  </section>
+
+  <!-- API Viewer -->
+<section id="apiViewer" class="section section-alt">
+  <div class="container glass api-box">
+    <h2 class="section-title neon">Your API Data</h2>
+    <div class="api-frame">
+      <pre id="apiOutput" class="api-output">Loading...</pre>
+      <button id="copyApi" class="btn copy-btn">Copy JSON</button>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> TaskManager — Abdallah Hany</div>
+  </footer>
+</body>
+</html>
